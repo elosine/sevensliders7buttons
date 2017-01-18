@@ -67,7 +67,7 @@ void loop() {
   for (int i = 0; i < NP; i++) { //loop thru all pots
     pv[i] = analogRead(p[i]); //read analog pin
     //Send out values only when pot changes
-    if ( pv[i] < (ppv[i] - 1) || pv[i] > (ppv[i] + 2) ) {
+    if ( pv[i] < (ppv[i] - 2) || pv[i] > (ppv[i] + 2) ) {
       //Action
       Serial.print( "p" + String(i) + ":");
       Serial.println(pv[i]); //send value to serial bus
